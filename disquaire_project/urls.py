@@ -21,6 +21,7 @@ from store import views
 
 urlpatterns = [
     url(r'^disquaire$', views.index, name="index"),
+    url(r'^disquaire/$', views.index, name="index"),
     url(r'^disquaire/store/', include('store.urls', namespace='store')),
     url(r'^disquaire/admin/', admin.site.urls)
 ]
