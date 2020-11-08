@@ -20,13 +20,13 @@ from django.contrib import admin
 from store import views
 
 urlpatterns = [
-    url(r'^$', views.index, name="index"),
-    url(r'^store/', include('store.urls', namespace='store')),
-    url(r'^admin/', admin.site.urls)
+    url(r'^disquaire$', views.index, name="index"),
+    url(r'^disquaire/store/', include('store.urls', namespace='store')),
+    url(r'^disquaire/admin/', admin.site.urls)
 ]
 
 if settings.DEBUG:
     import debug_toolbar
     urlpatterns = [
-        url(r'^__debug__/', include(debug_toolbar.urls)),
+        url(r'^disquaire/__debug__/', include(debug_toolbar.urls)),
     ] + urlpatterns
